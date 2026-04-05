@@ -50,39 +50,39 @@ const comparison =
     : 0;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 ">
-      <div className="bg-white dark:bg-gray-800 dark:text-white p-4 shadow rounded">
-        <p className="text-gray-500 dark:text-gray-300">Total Income</p>
-        <h2 className="text-xl font-bold">₹ {totalIncome}</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+      <div className="bg-white dark:bg-gray-800 dark:text-white p-3 md:p-4 rounded-xl shadow">
+        <p className="text-gray-500 dark:text-gray-300 text-sm md:text-base">Total Income</p>
+        <h2 className="text-lg md:text-xl font-bold">₹ {totalIncome}</h2>
       </div>
 
-      <div className="bg-white dark:bg-gray-800 dark:text-white p-4 shadow rounded">
-        <p className="text-gray-500 dark:text-gray-300">Total Expense</p>
-        <h2 className="text-xl font-bold">₹ {totalExpense}</h2>
+      <div className="bg-white dark:bg-gray-800 dark:text-white p-3 md:p-4 rounded-xl shadow">
+        <p className="text-gray-500 dark:text-gray-300 text-sm md:text-base">Total Expense</p>
+        <h2 className="text-lg md:text-xl font-bold">₹ {totalExpense}</h2>
       </div>
 
-      <div className="bg-white p-4 shadow rounded">
-        <p className="text-gray-500">Highest Transaction</p>
-        <h2 className="text-xl font-bold">₹ {highest}</h2>
+      <div className="bg-white dark:bg-gray-800 dark:text-white p-3 md:p-4 rounded-xl shadow">
+        <p className="text-gray-500 dark:text-gray-300 text-sm md:text-base">Highest Transaction</p>
+        <h2 className="text-lg md:text-xl font-bold">₹ {highest}</h2>
       </div>
       {/* Highest Category */}
-    <div className="bg-white dark:bg-gray-800 dark:text-white p-4 shadow rounded">
-      <p className="text-gray-500 dark:text-gray-300">Highest Spending Category</p>
-      <h2 className="text-xl font-bold">{highestCategory}</h2>
+    <div className="bg-white dark:bg-gray-800 dark:text-white p-3 md:p-4 rounded-xl shadow">
+      <p className="text-gray-500 dark:text-gray-300 text-sm md:text-base">Highest Spending Category</p>
+      <h2 className="text-lg md:text-xl font-bold">{highestCategory}</h2>
     </div>
 
     {/* Monthly Comparison */}
-    <div className="bg-white dark:bg-gray-800 dark:text-white p-4 shadow rounded">
-      <p className="text-gray-500 dark:text-gray-300">Monthly Change</p>
-      <h2 className={`text-xl font-bold ${comparison >= 0 ? "text-green-500" : "text-red-500"}`}>
+    <div className="bg-white dark:bg-gray-800 dark:text-white p-3 md:p-4 rounded-xl shadow">
+      <p className="text-gray-500 dark:text-gray-300 text-sm md:text-base">Monthly Change</p>
+      <h2 className={`text-lg md:text-xl font-bold ${comparison >= 0 ? "text-green-500" : "text-red-500"}`}>
         ₹ {comparison}
       </h2>
     </div>
 
     {/* Savings */}
-    <div className="bg-white dark:bg-gray-800 dark:text-white p-4 shadow rounded">
-      <p className="text-gray-500 dark:text-gray-300">Net Savings</p>
-      <h2 className={`text-xl font-bold ${(totalIncome - totalExpense) >= 0 ? "text-green-500" : "text-red-500"}`}>
+    <div className="bg-white dark:bg-gray-800 dark:text-white p-3 md:p-4 rounded-xl shadow">
+      <p className="text-gray-500 dark:text-gray-300 text-sm md:text-base">Net Savings</p>
+      <h2 className={` text-lg md:text-xl font-bold ${(totalIncome - totalExpense) >= 0 ? "text-green-500" : "text-red-500"}`}>
         ₹ {totalIncome - totalExpense}
       </h2>
     </div>
