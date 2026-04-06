@@ -51,7 +51,7 @@ const Transactions = () => {
       {role === "admin" && (
         <button
           onClick={() => setShowModal(true)}
-          className="bg-blue-500 hover:bg-blue-600 transition text-white px-4 py-2 rounded w-full md:w-auto cursor-pointer"
+          className=" ml-5 bg-blue-500 hover:bg-blue-600 transition text-white px-4 py-2 rounded w-full md:w-auto cursor-pointer"
         >
           + Add Transaction
         </button>
@@ -59,11 +59,11 @@ const Transactions = () => {
 
       {/* ✅ FILTER */}
       <select
-        className="border p-2 rounded w-full md:w-auto dark:bg-gray-700 dark:text-white"
+        className=" ml-5 border p-2 rounded w-full md:w-auto dark:bg-gray-700 dark:text-white"
         onChange={(e) => setFilter(e.target.value)}
       >
-        <option value="all">All</option>
-        <option value="income">Income</option>
+        <option value="all" className="ml-5">All</option>
+        <option value="income" className="ml-5">Income</option>
         <option value="expense">Expense</option>
       </select>
 
