@@ -9,16 +9,16 @@ const Header = () => {
     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 p-4 bg-gray-100 dark:bg-gray-800 dark:text-white">
 
       {/* TITLE */}
-      <h1 className="font-bold text-lg md:text-xl text-center md:text-left">
+      <h1 className="font-bold text-lg md:text-xl text-center md:text-left cursor-pointer">
         Finance Dashboard
       </h1>
 
       {/* NAVIGATION */}
       <div className="flex flex-wrap justify-center md:justify-start gap-3">
-        <Link className="hover:text-blue-500" to="/">
+        <Link className="hover:text-blue-500 cursor-pointer" to="/">
           Dashboard
         </Link>
-        <Link className="hover:text-blue-500" to="/transactions">
+        <Link className="hover:text-blue-500 cursor-pointer" to="/transactions">
           Transactions
         </Link>
       </div>

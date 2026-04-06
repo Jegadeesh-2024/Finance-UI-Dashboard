@@ -79,9 +79,8 @@ useEffect(() => {
 
           <select
             name="type"
-className="w-full border p-2.5 rounded dark:bg-gray-700 dark:text-white"            onChange={handleChange}
-            value={formData.type}
-          >
+className="w-full border p-2.5 rounded dark:bg-gray-700 dark:text-white"     onChange={handleChange}
+            value={formData.type}>
             <option value="expense">Expense</option>
             <option value="income">Income</option>
           </select>
@@ -98,7 +97,7 @@ className="w-full border p-2.5 rounded dark:bg-gray-700 dark:text-white"        
           <div className="flex flex-col md:flex-row gap-2 md:justify-between">
             <button
               type="submit"
-              className="bg-green-500 text-white px-4 py-2 rounded"
+              className="bg-green-500 text-white px-4 py-2 rounded cursor-pointer"
             >
               {editData ?"Update":"Add"}
             </button>
@@ -106,7 +105,7 @@ className="w-full border p-2.5 rounded dark:bg-gray-700 dark:text-white"        
             <button
               type="button"
               onClick={onClose}
-className="w-full md:w-auto bg-green-500 text-white px-4 py-2 rounded"            >
+className="w-full md:w-auto bg-green-500 text-white px-4 py-2 rounded cursor-pointer"            >
               Cancel
             </button>
           </div>

@@ -41,14 +41,23 @@ const pieData = Object.keys(categoryData).map((key) => ({
 
   return (
     <div className="p-4 md:p-6">
-      <div className="grid md:grid-cols-3 gap-4 ">
-        <SummaryCard title="Balance" amount={balance}  />
-        <SummaryCard title="Income" amount={income} icon={<FaArrowUp/>} />
-        <SummaryCard title="Expenses" amount={expense} icon={<FaArrowDown/>} />
-        <CustomLineChart data={chartData}/>
-        <CustomPieChart data={pieData}/>
-        <Insights/>
-      </div>
+       {/* 🔹 SUMMARY CARDS */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <SummaryCard title="Balance" amount={balance} />
+    <SummaryCard title="Income" amount={income} icon={<FaArrowUp />} />
+    <SummaryCard title="Expenses" amount={expense} icon={<FaArrowDown />} />
+  </div>
+
+  {/* 🔹 CHARTS */}
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-6">
+    <CustomLineChart data={chartData} />
+    <CustomPieChart data={pieData} />
+  </div>
+
+  {/* 🔹 INSIGHTS */}
+  <div className="mt-6">
+    <Insights />
+  </div>
     </div>
   );
 };
